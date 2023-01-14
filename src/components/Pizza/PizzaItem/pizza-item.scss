@@ -1,0 +1,60 @@
+.pizza-item {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease-in-out;
+  padding: 10px 0;
+  &:hover {
+    box-shadow: 0 10px 18px rgba(237, 108, 2, 0.4);
+  }
+  &__btn {
+    border-radius: 10px !important;
+  }
+  &__bottom {
+    h3 {
+      font-weight: 500;
+      font-size: 25px;
+    }
+  }
+  &__heart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+    &:hover {
+      animation: heart 0.5s linear infinite;
+    }
+  }
+  &__delivery {
+    position: absolute;
+    top: 40%;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: #212121;
+    color: #fff;
+    border-radius: 5px;
+    z-index: 10;
+  }
+  img {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    padding: 10px;
+    width: 250px;
+    height: 250px;
+    transform: translateX(10px);
+  }
+  h2 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
+@keyframes heart {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}

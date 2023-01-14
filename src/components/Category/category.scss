@@ -1,0 +1,29 @@
+@import '../../styles/breakpoints';
+.category {
+  @include breakpoint(md_sp1) {
+    overflow-x: scroll;
+  }
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 2px;
+    background-color: #fff;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #ed6c02;
+    border-radius: 10px;
+  }
+  .row {
+    position: relative;
+    white-space: nowrap;
+    display: inline-block;
+    overflow: hidden;
+    margin: 0 -5px;
+    padding: 10px 0;
+    &__btn {
+      display: inline-block;
+      margin: 0 5px;
+      border-radius: 30px;
+      padding: 7px 15px;
+    }
+  }
+}

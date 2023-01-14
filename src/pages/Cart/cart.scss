@@ -1,0 +1,51 @@
+@import '../../styles/mixin';
+@import '../../styles/breakpoints';
+.cart {
+  height: 90vh;
+  h1 {
+    @include adaptiv-font(32, 22, 32);
+  }
+  &__items {
+    height: 330px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 5px 10px 5px 5px;
+    &::-webkit-scrollbar {
+      width: 2px;
+      height: 2px;
+      background-color: #fff;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #ed6c02;
+      border-radius: 10px;
+    }
+  }
+  &__item {
+    gap: 20px;
+    border-top: 1px solid #f4f4f4;
+    padding: 5px 0;
+    img {
+      max-width: 100px;
+    }
+    h3 {
+      font-size: 20px;
+    }
+  }
+  &__info {
+    width: 220px;
+    @include breakpoint(xs) {
+      width: 190px;
+    }
+  }
+  &__full {
+    font-size: 22px;
+    @include adaptiv-font(22, 17, 22);
+    &-orange {
+      color: #fe5f1e;
+    }
+  }
+  &__mobile-border {
+    border: 1px solid #fe5f1e;
+    border-radius: 10px;
+  }
+}

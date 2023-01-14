@@ -1,0 +1,29 @@
+// Обнуление __ start ==========================================================
+@import "./null";
+// Обнуление __ end ============================================================
+// Mixins __ start =============================================================
+@import "./breakpoints";
+// Mixins __ end ===============================================================
+
+.app {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 112px;
+  @include breakpoint(xs) {
+    padding-top: 90px;
+  }
+}
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  @include breakpoint(lg) {
+    max-width: 860px;
+  }
+}
+.css-1to7aaw-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+  background-color: #ed6c02 !important;
+}

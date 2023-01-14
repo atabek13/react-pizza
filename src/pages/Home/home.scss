@@ -1,0 +1,7 @@
+.home {
+  &__sort {
+    @media (max-width: 812px) {
+      display: none;
+    }
+  }
+}

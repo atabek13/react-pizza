@@ -1,0 +1,50 @@
+@import '../../styles/mixin';
+@import '../../styles/breakpoints';
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 25px 0;
+  border-bottom: 1px solid rgb(221, 218, 218);
+  background-color: #fff;
+  transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
+  &.active {
+    background-color: #212121;
+    padding: 20px 0;
+    border-color: transparent;
+    .header__logo {
+      color: #fff;
+    }
+  }
+  gap: 20px;
+  z-index: 100;
+  &__logo {
+    gap: 15px;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    img {
+      pointer-events: none;
+    }
+    h2 {
+      line-height: 120%;
+      font-weight: 800;
+      letter-spacing: 2px;
+      font-size: 21px;
+      transition: color 0.3s ease-in-out;
+      @include adaptiv-font(21, 18, 21);
+    }
+    p {
+      font-size: 12px;
+      @include adaptiv-font(12, 10, 12);
+      transition: color 0.3s ease-in-out;
+    }
+  }
+  &__logo-text {
+    @include breakpoint(sm) {
+      display: none;
+    }
+  }
+}

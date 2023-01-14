@@ -1,0 +1,30 @@
+@import '../../styles/mixin';
+@import '../../styles/breakpoints';
+.cart-empty {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  gap: 20px;
+  @include breakpoint(md_sp1) {
+    gap: 15px;
+  }
+  h2 {
+    font-size: 22px;
+    @include adaptiv-font(22, 20, 22);
+  }
+  p {
+    font-size: 14px;
+    @include adaptiv-font(14, 12, 14);
+    line-height: 120%;
+  }
+  &__btn {
+    width: 200px;
+  }
+  img {
+    margin: 0 auto;
+    max-width: 250px;
+    height: 250px;
+    pointer-events: none;
+  }
+}

@@ -1,0 +1,9 @@
+.category-skeleton {
+  gap: 20px;
+  &__item {
+    display: block;
+    width: 100px;
+    padding: 22px 0;
+    border-radius: 22px !important;
+  }
+}

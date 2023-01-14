@@ -1,0 +1,29 @@
+@import '../../styles/breakpoints';
+@import '../../styles/mixin';
+.pizza {
+  padding-bottom: 30px;
+  h1 {
+    @include adaptiv-font(32, 22, 32);
+  }
+  &__sort {
+    display: none;
+    @media (max-width: 812px) {
+      display: block;
+    }
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    @include breakpoint(xl) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include breakpoint(lgs) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpoint(sm) {
+      justify-content: center;
+      grid-template-columns: repeat(1, 300px);
+    }
+  }
+}
